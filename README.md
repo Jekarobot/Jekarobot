@@ -1,162 +1,323 @@
-Добро пожаловать в моё портфолио! Здесь собраны все мои проекты, разделённые по технологиям и направлениям.
+## 👋 Привет! Я — Jekarobot
+
+Я — разработчик, который любит автоматизировать всё, что можно автоматизировать, и создавать полезные инструменты с открытым исходным кодом 🛠️. В моих проектах вы найдёте как учебные демо-приложения, так и полноценные сервисы с AI-интеграцией и контейнеризацией. Мой стек — TypeScript, React, Node.js, Docker и не только. Добро пожаловать в мой GitHub-профиль! 🚀
+
+## ⭐ Избранные проекты
+
+### 🚀 GitHub Repository Manager
+
+**GitHub Repo Manager** — это инструмент для автоматизации управления репозиториями GitHub и генерации динамического профиля README. Проект позволяет централизованно обновлять описания проектов, синхронизировать конфигурации и публиковать изменения в репозиториях с использованием AI-ассистента на базе DeepSeek.
+
+**🛠️ Ключевые технологии и стек**
+- **TypeScript** — основной язык разработки с строгой типизацией
+- **Node.js** — среда выполнения для CLI и серверной части
+- **Express.js** — веб-сервер для обработки запросов и middleware
+- **DeepSeek API** — интеграция AI для генерации умных описаний проектов
+- **Docker** — контейнеризация приложения для удобного развертывания
+
+**🏗️ Архитектура и особенности реализации**
+
+Проект построен по модульной архитектуре с разделением на CLI-интерфейс (`src/cli/`), серверную часть (`src/server/`) и сервисный слой (`src/services/`). Сервисы изолированы по функциональности: `github.service.ts` отвечает за взаимодействие с GitHub API, `deepseek.service.ts` — за AI-генерацию, а `push.service.ts` — за публикацию изменений. Конфигурация управляется через JSON-файлы (`repos.config.example.json`), а логирование централизовано через `logger.ts`. Особенность реализации — middleware `push-confirm.ts` для подтверждения операций перед отправкой.
+
+**✨ Основные возможности**
+- **Автоматическое обновление README** — генерация и синхронизация описаний проектов с AI-помощью
+- **Управление репозиториями** — массовое обновление конфигураций и метаданных через CLI
+- **Веб-интерфейс** — публичная панель для просмотра и управления проектами
+- **Docker-развертывание** — полная контейнеризация с docker-compose для быстрого запуска
+- **Безопасные операции** — подтверждение push-действий через middleware и санитизация данных (`sanitizer.service.ts`)
+
+🔗 [Перейти к проекту](https://github.com/Jekarobot/github-repo-manager)
 
 ---
 
-## 🚀 React & Frontend
+### 📘 bjs-diplom — Демонстрационный проект для курсовой работы
 
-| Проект                                                                        | Описание                                       | Ссылка                                                          |
-| ----------------------------------------------------------------------------- | ---------------------------------------------- | --------------------------------------------------------------- |
-| **[AspectRatio](https://github.com/Jekarobot/AspectRatio)**                   | Компонент для сохранения пропорций изображений | [Перейти](https://github.com/Jekarobot/AspectRatio)             |
-| **[Stars-React](https://github.com/Jekarobot/Stars-React)**                   | Компонент рейтинга в виде звёзд                | [Перейти](https://github.com/Jekarobot/Stars-React)             |
-| **[ListingReact](https://github.com/Jekarobot/ListingReact)**                 | Список объявлений на React                     | [Перейти](https://github.com/Jekarobot/ListingReact)            |
-| **[Layouts-React](https://github.com/Jekarobot/Layouts-React)**               | Примеры различных макетов на React             | [Перейти](https://github.com/Jekarobot/Layouts-React)           |
-| **[ReactComponentsClass](https://github.com/Jekarobot/ReactComponentsClass)** | Классовые компоненты React                     | [Перейти](https://github.com/Jekarobot/ReactComponentsClass)    |
-| **[ReactComponentsFunc](https://github.com/Jekarobot/ReactComponentsFunc)**   | Функциональные компоненты React                | [Перейти](https://github.com/Jekarobot/ReactComponentsFunc)     |
-| **[ReactFilters](https://github.com/Jekarobot/ReactFilters)**                 | Фильтрация данных на React                     | [Перейти](https://github.com/Jekarobot/ReactFilters)            |
-| **[BootstrapCard](https://github.com/Jekarobot/BootstrapCard)**               | Карточка с использованием Bootstrap            | [Перейти](https://github.com/Jekarobot/BootstrapCard)           |
-| **[HEXConverter](https://github.com/Jekarobot/HEXConverter)**                 | Конвертер HEX в RGB и обратно                  | [Перейти](https://github.com/Jekarobot/HEXConverter)            |
+Проект представляет собой клиент-серверное приложение для управления финансами, курсами валют и акциями, а также избранными активами пользователя. Разработан в рамках дипломной работы для демонстрации навыков работы с REST API, асинхронными запросами и современным стеком веб-разработки.
 
----
+**🛠️ Ключевые технологии и стек**
+- **Backend:** Node.js, Express.js
+- **Frontend:** Чистый JavaScript (ES6+), HTML5, CSS3 (с использованием Semantic UI)
+- **Дополнительно:** JSON-сервер для хранения данных (db.json), модульная архитектура API-слоя
 
-## ⚛️ React Hooks & Lifecycle
+**🏗️ Архитектура и особенности реализации**
 
-| Проект                                                                  | Описание                                       | Ссылка                                                       |
-| ----------------------------------------------------------------------- | ---------------------------------------------- | ------------------------------------------------------------ |
-| **[useEffectHook](https://github.com/Jekarobot/useEffectHook)**         | Примеры использования useEffect                | [Перейти](https://github.com/Jekarobot/useEffectHook)        |
-| **[useJsonFetch](https://github.com/Jekarobot/useJsonFetch)**           | Кастомный хук для fetch с JSON                 | [Перейти](https://github.com/Jekarobot/useJsonFetch)         |
-| **[WorldTimeUseState](https://github.com/Jekarobot/WorldTimeUseState)** | Отображение мирового времени через useState    | [Перейти](https://github.com/Jekarobot/WorldTimeUseState)    |
-| **[CRUD-lifecycle](https://github.com/Jekarobot/CRUD-lifecycle)**       | CRUD-приложение с жизненным циклом компонентов | [Перейти](https://github.com/Jekarobot/CRUD-lifecycle)       |
-| **[FitnessTracker](https://github.com/Jekarobot/FitnessTracker)**       | Трекер фитнес-активности                       | [Перейти](https://github.com/Jekarobot/FitnessTracker)       |
+Приложение построено по принципу разделения клиентской и серверной частей. Серверная часть реализована на Express.js с маршрутами для работы с пользователями, финансами, акциями и избранным. Клиентская часть использует классы для взаимодействия с API (ApiConnector, MoneyManager, RatesBoard и др.), что обеспечивает чистоту кода и легкость поддержки. Для стилизации используется Semantic UI, а для анимаций — кастомные CSS-эффекты.
+
+**✨ Основные возможности**
+- 🔐 **Авторизация и регистрация** — форма входа и выхода из системы
+- 💰 **Управление финансами** — просмотр баланса, конвертация валют, переводы
+- 📈 **Курсы валют и акций** — динамическое обновление данных через API
+- ⭐ **Избранное** — добавление/удаление активов в список избранного
+- 🖼 **Интерактивный интерфейс** — анимации, адаптивный дизайн, модальные окна
+
+🔗 [Перейти к проекту](https://github.com/Jekarobot/bjs-diplom)
 
 ---
 
-## 🧩 HOC & Декораторы
+### 💼 BHJ Diploma — Система управления банковскими счетами и транзакциями
 
-| Проект                                                                | Описание                    | Ссылка                                                      |
-| --------------------------------------------------------------------- | --------------------------- | ----------------------------------------------------------- |
-| **[DateFormatterHOC](https://github.com/Jekarobot/DateFormatterHOC)** | HOC для форматирования дат  | [Перейти](https://github.com/Jekarobot/DateFormatterHOC)    |
-| **[HighlightHOC](https://github.com/Jekarobot/HighlightHOC)**         | HOC для подсветки элементов | [Перейти](https://github.com/Jekarobot/HighlightHOC)        |
+Проект **bhj-diploma** представляет собой веб-приложение для управления банковскими счетами и транзакциями. Он разработан как демонстрационный инструмент для отработки навыков работы с REST API, асинхронными формами и клиент-серверным взаимодействием. Приложение позволяет пользователям регистрироваться, создавать счета, выполнять переводы и отслеживать историю операций.
+
+**🛠️ Ключевые технологии и стек**
+- **Frontend**: Vanilla JavaScript (ES6+), CSS3, HTML5
+- **Backend**: Node.js с Express.js (маршрутизация через `routes/`)
+- **Хранение данных**: JSON-файл (`db.json`) в качестве базы данных
+- **UI-фреймворк**: AdminLTE (на основе Bootstrap) для интерфейса
+- **Тестирование**: Спецификации в папке `test/` (библиотеки в `test/lib/`)
+
+**🏗️ Архитектура и особенности реализации**
+
+Приложение построено по модульной архитектуре с разделением на клиентскую и серверную части. Серверная сторона включает отдельные маршруты для управления пользователями (`routes/user.js`), счетами (`routes/account.js`) и транзакциями (`routes/transaction.js`). Клиентская часть реализована через единую точку входа `public/js/App.js`, которая взаимодействует с API через модули в `public/js/api/`. Особое внимание уделено асинхронной обработке форм (`md/async-forms.md`), модальным окнам (`md/modals.md`) и динамическому обновлению боковой панели (`md/sidebar-toggle.md`, `md/sidebar-links.md`).
+
+**✨ Основные возможности**
+- 🔐 **Регистрация и аутентификация** — создание новых пользователей и вход в систему
+- 💳 **Управление счетами** — создание новых счетов и просмотр существующих
+- 💸 **Проведение транзакций** — выполнение переводов между счетами
+- 📊 **Интерактивный интерфейс** — динамическая боковая панель, модальные окна и виджет пользователя
+- 📡 **REST API** — полноценное серверное API с документацией
+
+🔗 [Перейти к проекту](https://github.com/Jekarobot/bhj-diploma)
 
 ---
+
+### 🚀 MyHeat-Onboard
+
+**MyHeat-Onboard** — это легковесное веб-приложение для быстрой настройки и мониторинга систем отопления. Проект предоставляет интуитивно понятный интерфейс для onboard-конфигурации тепловых контроллеров, визуализации данных и управления базовыми параметрами. Решение ориентировано на инженеров и пользователей, желающих упростить процесс первичной настройки оборудования.
+
+**🛠️ Ключевые технологии и стек**
+- **Frontend**: HTML5, CSS3 (index.css), Vanilla JavaScript (index.js) — минималистичный и быстрый UI без зависимостей.
+- **Backend**: PHP (api/index.php) — REST API для обработки запросов и взаимодействия с внешними системами.
+- **Инфраструктура**: Docker + docker-compose — контейнеризация для простого развёртывания и масштабирования.
+- **Ассеты**: SVG-логотип (white_logo.svg) и промо-изображения (promo.jpg/png) для брендинга.
+
+**🏗️ Архитектура и особенности реализации**
+- **Монолитная структура**: Все компоненты (HTML, CSS, JS, PHP) организованы в едином репозитории для упрощения разработки и деплоя.
+- **API-first подход**: Backend на PHP обрабатывает запросы через единую точку входа (api/index.php), возвращая JSON-ответы.
+- **Контейнеризация**: Dockerfile и docker-compose.yml обеспечивают изолированное окружение, включая веб-сервер и PHP-интерпретатор.
+- **Документирование**: Файлы `POTENTIAL_PROBLEMS.md` и `TASKS.md` помогают отслеживать проблемы и задачи, что повышает maintainability проекта.
+
+**✨ Основные возможности**
+- **Управление параметрами отопления**: Настройка температуры, режимов работы и расписаний через веб-интерфейс.
+- **Визуализация данных**: Отображение текущих показателей (температура, давление) в реальном времени.
+- **REST API**: Интеграция с внешними системами мониторинга и управления.
+- **Кроссплатформенность**: Работает в любом современном браузере, легко разворачивается через Docker.
+- **Гибкая конфигурация**: Поддержка кастомных промо-материалов и логотипов для брендирования.
+
+🔗 [Перейти к проекту](https://github.com/Jekarobot/myheat-onboard)
+
+---
+
+### 🎓 MQ-Diploma — Адаптивный макет интернет-магазина
+
+Проект представляет собой адаптивный веб-макет интернет-магазина, разработанный в рамках дипломной работы. Основная цель — демонстрация навыков верстки с использованием современных подходов к адаптивности и кроссбраузерности.
+
+**🛠️ Ключевые технологии и стек**
+- **HTML5** — семантическая разметка страницы
+- **CSS3** — стилизация с использованием медиа-запросов для адаптации под различные устройства
+- **SVG-иконки** — векторная графика для элементов интерфейса
+- **Web-шрифты Open Sans** — подключены в форматах TTF, WOFF, WOFF2 для оптимальной загрузки
+
+**🏗️ Архитектура и особенности реализации**
+
+Проект построен по классической файловой структуре: HTML-документ, отдельный CSS-файл, папки с изображениями, шрифтами и SVG-иконками. Реализована **адаптивная верстка** с поддержкой трех брейкпоинтов (десктоп, планшет, мобильные устройства). Изображения представлены в нескольких разрешениях для оптимальной загрузки на разных экранах.
+
+**✨ Основные возможности**
+- **Адаптивный дизайн** — корректное отображение на устройствах с разной шириной экрана
+- **Каталог товаров** — секция с карточками товаров и изображениями в трех разрешениях
+- **Тренды** — блок с актуальными товарами и категориями
+- **Формы обратной связи** — интерактивные элементы с SVG-иконками
+- **Оптимизация шрифтов** — использование современных форматов для быстрой загрузки
+
+🔗 [Перейти к проекту](https://github.com/Jekarobot/mq-diploma)
+
+---
+
+### 🛠️ DOM
+
+**Интерактивное веб-приложение для демонстрации работы с DOM-элементами и событийной моделью браузера.**
+
+Проект представляет собой учебное приложение, разработанное для отработки навыков манипуляции DOM-деревом, обработки событий и асинхронного программирования на JavaScript. Основная цель — создать динамический интерфейс с игровой механикой, где пользователь взаимодействует с визуальными элементами.
+
+**🛠️ Ключевые технологии и стек**
+- **JavaScript (ES6+)** — основная логика приложения
+- **Webpack** — сборка проекта (dev, prod, common конфигурации)
+- **ESLint** — статический анализ кода
+- **CSS3** — стилизация интерфейса
+- **Yarn** — менеджер пакетов
+
+**🏗️ Архитектура и особенности реализации**
+
+Проект построен по модульной архитектуре с разделением на:
+- `src/js/app.js` — точка входа приложения
+- `src/js/modules/` — модули с бизнес-логикой
+- `src/js/tests/` — тестовые файлы
+
+Используется конфигурация Webpack для разделения сред разработки и продакшена. Статические ресурсы (изображения, SVG) хранятся в `src/img/`. Стили вынесены в отдельный CSS-файл для лучшей поддерживаемости.
+
+**✨ Основные возможности**
+- 🎮 **Интерактивная игровая механика** — пользователь кликает по появляющимся элементам (гоблин, молот)
+- 🔄 **Динамическое обновление DOM** — элементы случайным образом меняют позицию на игровом поле
+- 📊 **Система подсчёта очков** — отслеживание успешных кликов и промахов
+- 🖼 **Визуальные эффекты** — использование SVG-иконок и изображений для улучшения UX
+- ⚡ **Асинхронная обработка** — таймеры и интервалы для управления появлением элементов
+
+🔗 [Перейти к проекту](https://github.com/Jekarobot/dom)
+
+---
+
+### 🚆 Railway Booking — Сервис для покупки железнодорожных билетов
+
+**Railway Booking** — это современное веб-приложение для поиска и бронирования железнодорожных билетов. Проект предоставляет пользователям удобный интерфейс для выбора маршрутов, просмотра деталей поездов и оформления заказов с полным циклом оплаты и управления пассажирами.
+
+**🛠️ Ключевые технологии и стек**
+- **React 18** + **TypeScript** для типобезопасной разработки
+- **Vite** для быстрой сборки и горячей перезагрузки
+- **ESLint** для поддержания качества кода
+- Современный **CSS** с кастомными стилями и адаптивной версткой
+
+**🏗️ Архитектура и особенности реализации**
+
+Проект построен по **Feature-Sliced Design (FSD)** — современной методологии, обеспечивающей масштабируемость и поддерживаемость. Код разделен на слои: `entities` (сущности, например, карточки поездов), `features` (функциональные модули: календарь, слайдер, поиск), `widgets` (виджеты: секции, фильтры, корзина), `pages` (страницы приложения) и `shared` (общие утилиты, API, хуки, типы). Для управления состоянием используются **React Context** (провайдеры: `SearchProvider`, `OrderBuildProvider`, `PopupProvider` и др.).
+
+**✨ Основные возможности**
+- 🔍 **Поиск билетов** с фильтрацией по датам, направлениям и параметрам поездов
+- 🗓 **Кастомный календарь** для выбора дат отправления и возвращения
+- 🚃 **Детальный просмотр** информации о поездах, вагонах и местах
+- 🛒 **Оформление заказа** с добавлением пассажиров, выбором мест и оплатой
+- 📋 **Управление пассажирами** (ФИО, документы, возрастные категории)
+- 📱 **Адаптивный дизайн** для комфортного использования на любых устройствах
+
+🔗 [Перейти к проекту](https://github.com/Jekarobot/railway-booking)
+
+## 🧪 Тестирование
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| HWClearFunctions | Проект "HWClearFunctions" предназначен для реализации и тестирования модуля упра | [Перейти](https://github.com/Jekarobot/HWClearFunctions) |
+| AspectRatio | Проект "AspectRatio" — это веб-инструмент для расчета и визуализации соотношений | [Перейти](https://github.com/Jekarobot/AspectRatio) |
+| testAjs | Проект "testAjs" представляет собой минимальную JavaScript-среду для тестировани | [Перейти](https://github.com/Jekarobot/testAjs) |
+| matchers | Проект "matchers" предназначен для реализации и тестирования функций сравнения о | [Перейти](https://github.com/Jekarobot/matchers) |
+| testing | Проект "testing" представляет собой веб-приложение для валидации номеров банковс | [Перейти](https://github.com/Jekarobot/testing) |
+
+## 📁 Прочие проекты
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| Jekarobot | Jekarobot — это проект, предназначенный для автоматизации задач с помощью бота, | [Перейти](https://github.com/Jekarobot/Jekarobot) |
+| Portfolio | Проект "Portfolio" предназначен для демонстрации сертификатов и изображений, пре | [Перейти](https://github.com/Jekarobot/Portfolio) |
+
+## 🔧 Сборка и линтеры
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| babel | Проект "babel" — это конфигурация инструмента Babel для транспиляции современног | [Перейти](https://github.com/Jekarobot/babel) |
+| ESLint | ESLint — это инструмент статического анализа кода для JavaScript, который находи | [Перейти](https://github.com/Jekarobot/ESLint) |
+| npm-hw | Проект "npm-hw" представляет собой простую веб-страницу с HTML-файлом и конфигур | [Перейти](https://github.com/Jekarobot/npm-hw) |
+| ajs | Проект "ajs" представляет собой JavaScript-приложение, собираемое с помощью Webp | [Перейти](https://github.com/Jekarobot/ajs) |
+| WebPack | Webpack — это сборщик модулей, который объединяет файлы из папки src (например, | [Перейти](https://github.com/Jekarobot/WebPack) |
+| MyTemplate | MyTemplate — это минимальный шаблон для сборки JavaScript-приложения с использов | [Перейти](https://github.com/Jekarobot/MyTemplate) |
+| forIn | Проект "forIn" представляет собой веб-приложение для отображения уведомлений, ре | [Перейти](https://github.com/Jekarobot/forIn) |
+| NewTypes | Проект "NewTypes" представляет собой веб-приложение для управления корзиной филь | [Перейти](https://github.com/Jekarobot/NewTypes) |
+| nicknames | Проект "nicknames" представляет собой веб-приложение для генерации или управлени | [Перейти](https://github.com/Jekarobot/nicknames) |
+| symbols-generators | Проект "symbols-generators" представляет собой веб-приложение для генерации симв | [Перейти](https://github.com/Jekarobot/symbols-generators) |
+| forms | Проект "forms" представляет собой веб-приложение для работы с формами, реализова | [Перейти](https://github.com/Jekarobot/forms) |
+| env | Проект "env" представляет собой веб-приложение, настроенное с помощью Webpack дл | [Перейти](https://github.com/Jekarobot/env) |
+
+## 📦 Модули & Импорт
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| Site_For_Import | Проект представляет собой одностраничный сайт-лендинг для презентации компании N | [Перейти](https://github.com/Jekarobot/Site_For_Import) |
+
+## 🔀 Git & Контроль версий
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| NeuroStartUp | Проект "NeuroStartUp" предназначен для автоматизации поиска оптимальных инвестиц | [Перейти](https://github.com/Jekarobot/NeuroStartUp) |
+| HW_REVERT | Проект HW_REVERT предназначен для демонстрации или восстановления исходной струк | [Перейти](https://github.com/Jekarobot/HW_REVERT) |
+| git-2-homeworks-merge | Проект "git-2-homeworks-merge" предназначен для отработки навыков слияния веток | [Перейти](https://github.com/Jekarobot/git-2-homeworks-merge) |
+| git-2-homeworks-pr | Проект представляет собой статическую веб-страницу с галереей изображений, испол | [Перейти](https://github.com/Jekarobot/git-2-homeworks-pr) |
+| git-2-homeworks-fork | Проект "git-2-homeworks-fork" представляет собой учебный репозиторий для отработ | [Перейти](https://github.com/Jekarobot/git-2-homeworks-fork) |
+
+## 🗂️ Основы JavaScript
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| classes-and-inheritance | Проект представляет собой учебную реализацию классов и наследования для игровых | [Перейти](https://github.com/Jekarobot/classes-and-inheritance) |
+| set | Проект "set" представляет собой учебное веб-приложение для работы с командами пе | [Перейти](https://github.com/Jekarobot/set) |
+| Map | Проект "Map" представляет собой веб-приложение для работы с репозиторием ошибок, | [Перейти](https://github.com/Jekarobot/Map) |
+| math-log-trig | Проект "math-log-trig" предназначен для реализации классов персонажей (Magician, | [Перейти](https://github.com/Jekarobot/math-log-trig) |
+| Symbols-iterators | Проект "Symbols-iterators" предназначен для демонстрации и тестирования работы и | [Перейти](https://github.com/Jekarobot/Symbols-iterators) |
+| ArrayBuffer | Проект предназначен для демонстрации работы с ArrayBuffer в JavaScript, включая | [Перейти](https://github.com/Jekarobot/ArrayBuffer) |
+
+## 🎮 DOM & Игры
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| import-export | Проект "import-export" представляет собой игровое приложение, реализованное в фа | [Перейти](https://github.com/Jekarobot/import-export) |
+| async-await | Проект демонстрирует использование async/await для асинхронной загрузки и парсин | [Перейти](https://github.com/Jekarobot/async-await) |
+| trello-clone | Проект "trello-clone" представляет собой упрощённую веб-реализацию доски Trello | [Перейти](https://github.com/Jekarobot/trello-clone) |
+| bhj-homeworks | Проект представляет собой набор практических заданий для изучения веб-разработки | [Перейти](https://github.com/Jekarobot/bhj-homeworks) |
+
+## ⏳ Асинхронность
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| Promises | Проект "Promises" предназначен для демонстрации асинхронной загрузки и парсинга | [Перейти](https://github.com/Jekarobot/Promises) |
+| bjs-2-homeworks | Это учебный проект, содержащий набор практических заданий по основам JavaScript, | [Перейти](https://github.com/Jekarobot/bjs-2-homeworks) |
+
+## 📡 HTTP & Серверы
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| Methods | Проект "Methods" представляет собой учебное приложение для демонстрации работы H | [Перейти](https://github.com/Jekarobot/Methods) |
+| Destructuring | Проект "Destructuring" предназначен для демонстрации и практического применения | [Перейти](https://github.com/Jekarobot/Destructuring) |
+| http-server | Проект "http-server" представляет собой простой HTTP-сервер на Node.js, предназн | [Перейти](https://github.com/Jekarobot/http-server) |
+| http-client | Проект "http-client" представляет собой веб-приложение для работы с HTTP-запроса | [Перейти](https://github.com/Jekarobot/http-client) |
+
+## ⚛️ React Компоненты
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| ReactComponentsClass | Проект "ReactComponentsClass" предназначен для демонстрации создания и использов | [Перейти](https://github.com/Jekarobot/ReactComponentsClass) |
+| ReactComponentsFunc | Проект "ReactComponentsFunc" предназначен для демонстрации реализации функционал | [Перейти](https://github.com/Jekarobot/ReactComponentsFunc) |
+
+## 💬 Серверные приложения
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| chatServer | Проект "chatServer" представляет собой простой сервер чата на Node.js, реализова | [Перейти](https://github.com/Jekarobot/chatServer) |
+| Chat | Проект "Chat" представляет собой веб-приложение для обмена сообщениями, реализов | [Перейти](https://github.com/Jekarobot/Chat) |
+
+## ⚛️ React Проекты
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| ReactFilters | ReactFilters — это React-приложение для фильтрации портфолио проектов по категор | [Перейти](https://github.com/Jekarobot/ReactFilters) |
+| BootstrapCard | BootstrapCard — это React-проект для демонстрации модульной карточки, собранной | [Перейти](https://github.com/Jekarobot/BootstrapCard) |
+| Layouts-React | Проект "Layouts-React" предназначен для демонстрации переключения между двумя ва | [Перейти](https://github.com/Jekarobot/Layouts-React) |
+| DecompositionJSDoc | Проект "DecompositionJSDoc" представляет собой React-приложение, разбитое на мел | [Перейти](https://github.com/Jekarobot/DecompositionJSDoc) |
+| Stars-React | Проект "Stars-React" представляет собой React-приложение для отображения и управ | [Перейти](https://github.com/Jekarobot/Stars-React) |
+| ListingReact | Проект "ListingReact" предназначен для отображения списка элементов (Listing) на | [Перейти](https://github.com/Jekarobot/ListingReact) |
+| HEXConverter | HEXConverter — это веб-приложение на React и TypeScript для конвертации шестнадц | [Перейти](https://github.com/Jekarobot/HEXConverter) |
+
+## ⚛️ React Приложения
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| FitnessTracker | FitnessTracker — это веб-приложение для отслеживания физической активности, реал | [Перейти](https://github.com/Jekarobot/FitnessTracker) |
+
+## ⚛️ React Жизненный цикл
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| CRUD-lifecycle | Проект "CRUD-lifecycle" представляет собой полнофункциональное веб-приложение дл | [Перейти](https://github.com/Jekarobot/CRUD-lifecycle) |
 
 ## 🌐 Роутинг (React Router)
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| CRUDwithRouter | Проект "CRUDwithRouter" представляет собой полнофункциональное веб-приложение дл | [Перейти](https://github.com/Jekarobot/CRUDwithRouter) |
+| Menu-RA-Router | Проект "Menu-RA-Router" представляет собой React-приложение с навигацией по стра | [Перейти](https://github.com/Jekarobot/Menu-RA-Router) |
 
-| Проект                                                            | Описание                           | Ссылка                                                    |
-| ----------------------------------------------------------------- | ---------------------------------- | --------------------------------------------------------- |
-| **[Menu-RA-Router](https://github.com/Jekarobot/Menu-RA-Router)** | Меню с роутингом на React Router   | [Перейти](https://github.com/Jekarobot/Menu-RA-Router)    |
-| **[CRUDwithRouter](https://github.com/Jekarobot/CRUDwithRouter)** | CRUD с использованием React Router | [Перейти](https://github.com/Jekarobot/CRUDwithRouter)    |
+## 🧩 HOC & Декораторы
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| HighlightHOC | Проект "HighlightHOC" предназначен для демонстрации использования HOC (Higher-Or | [Перейти](https://github.com/Jekarobot/HighlightHOC) |
+| DateFormatterHOC | Проект "DateFormatterHOC" предназначен для демонстрации использования компонента | [Перейти](https://github.com/Jekarobot/DateFormatterHOC) |
 
----
+## ⚛️ React Управление состоянием
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| WorldTimeUseState | Проект "WorldTimeUseState" — это React-приложение для отображения мирового време | [Перейти](https://github.com/Jekarobot/WorldTimeUseState) |
 
-## 📦 Утилиты и библиотеки
-
-| Проект                                                                      | Описание                         | Ссылка                                                         |
-| --------------------------------------------------------------------------- | -------------------------------- | -------------------------------------------------------------- |
-| **[github-repo-manager](https://github.com/Jekarobot/github-repo-manager)** | Менеджер репозиториев GitHub     | [Перейти](https://github.com/Jekarobot/github-repo-manager)    |
-| **[railway-booking](https://github.com/Jekarobot/railway-booking)**         | Система бронирования ж/д билетов | [Перейти](https://github.com/Jekarobot/railway-booking)        |
-| **[DecompositionJSDoc](https://github.com/Jekarobot/DecompositionJSDoc)**   | Декомпозиция с JSDoc             | [Перейти](https://github.com/Jekarobot/DecompositionJSDoc)     |
-
----
-
-## 🖥️ Серверная часть (Node.js)
-
-| Проект                                                      | Описание            | Ссылка                                                 |
-| ----------------------------------------------------------- | ------------------- | ------------------------------------------------------ |
-| **[chatServer](https://github.com/Jekarobot/chatServer)**   | Сервер для чата     | [Перейти](https://github.com/Jekarobot/chatServer)     |
-| **[http-server](https://github.com/Jekarobot/http-server)** | Простой HTTP-сервер | [Перейти](https://github.com/Jekarobot/http-server)    |
-| **[http-client](https://github.com/Jekarobot/http-client)** | HTTP-клиент         | [Перейти](https://github.com/Jekarobot/http-client)    |
-
----
-
-## 🗄️ Базы данных и хранение
-
-| Проект                                                        | Описание                           | Ссылка                                                  |
-| ------------------------------------------------------------- | ---------------------------------- | ------------------------------------------------------- |
-| **[Chat](https://github.com/Jekarobot/Chat)**                 | Чат с хранением данных (homeworks) | [Перейти](https://github.com/Jekarobot/Chat)            |
-| **[forms](https://github.com/Jekarobot/forms)**               | Формы и валидация                  | [Перейти](https://github.com/Jekarobot/forms)           |
-| **[trello-clone](https://github.com/Jekarobot/trello-clone)** | Клон Trello                        | [Перейти](https://github.com/Jekarobot/trello-clone)    |
-
----
-
-## 🧪 Тестирование и качество кода
-
-| Проект                                                | Описание                 | Ссылка                                                              |
-| ----------------------------------------------------- | ------------------------ | ------------------------------------------------------------------- |
-| **[testing](https://github.com/Jekarobot/testing)**   | Набор тестов             | [Перейти](https://github.com/Jekarobot/testing)                     |
-| **[matchers](https://github.com/Jekarobot/matchers)** | Шаблон для создания кода | [Перейти](https://github.com/Jekarobot/matchers)                    |
-| **[ESLint](https://github.com/Jekarobot/ESLint)**     | Конфигурация ESLint      | [Перейти](https://github.com/Jekarobot/ESLint)                      |
-
----
-
-## 🔧 Инструменты и сборка
-
-| Проект                                                          | Описание              | Ссылка                                                   |
-| --------------------------------------------------------------- | --------------------- | -------------------------------------------------------- |
-| **[WebPack](https://github.com/Jekarobot/WebPack)**             | Конфигурация Webpack  | [Перейти](https://github.com/Jekarobot/WebPack)          |
-| **[import-export](https://github.com/Jekarobot/import-export)** | Примеры import/export | [Перейти](https://github.com/Jekarobot/import-export)    |
-| **[babel](https://github.com/Jekarobot/babel)**                 | Конфигурация Babel    | [Перейти](https://github.com/Jekarobot/babel)            |
-| **[env](https://github.com/Jekarobot/env)**                     | Настройка окружения   | [Перейти](https://github.com/Jekarobot/env)              |
-
----
-
-## 📚 JavaScript (ES6+)
-
-| Проект                                                                              | Описание                                    | Ссылка                                                             |
-| ----------------------------------------------------------------------------------- | ------------------------------------------- | ------------------------------------------------------------------ |
-| **[Symbols-iterators](https://github.com/Jekarobot/Symbols-iterators)**             | Символы и итераторы                         | [Перейти](https://github.com/Jekarobot/Symbols-iterators)          |
-| **[symbols-generators](https://github.com/Jekarobot/symbols-generators)**           | Символы и генераторы                        | [Перейти](https://github.com/Jekarobot/symbols-generators)         |
-| **[Promises](https://github.com/Jekarobot/Promises)**                               | Промисы                                     | [Перейти](https://github.com/Jekarobot/Promises)                   |
-| **[async-await](https://github.com/Jekarobot/async-await)**                         | Асинхронность (async/await)                 | [Перейти](https://github.com/Jekarobot/async-await)                |
-| **[ArrayBuffer](https://github.com/Jekarobot/ArrayBuffer)**                         | ArrayBuffer и TypedArrays                   | [Перейти](https://github.com/Jekarobot/ArrayBuffer)                |
-| **[Map](https://github.com/Jekarobot/Map)**                                         | Коллекция Map                               | [Перейти](https://github.com/Jekarobot/Map)                        |
-| **[set](https://github.com/Jekarobot/set)**                                         | Коллекция Set                               | [Перейти](https://github.com/Jekarobot/set)                        |
-| **[math-log-trig](https://github.com/Jekarobot/math-log-trig)**                     | Математические и тригонометрические функции | [Перейти](https://github.com/Jekarobot/math-log-trig)              |
-| **[NewTypes](https://github.com/Jekarobot/NewTypes)**                               | Новые типы данных                           | [Перейти](https://github.com/Jekarobot/NewTypes)                   |
-| **[Destructuring](https://github.com/Jekarobot/Destructuring)**                     | Деструктуризация                            | [Перейти](https://github.com/Jekarobot/Destructuring)              |
-| **[classes-and-inheritance](https://github.com/Jekarobot/classes-and-inheritance)** | Классы и наследование                       | [Перейти](https://github.com/Jekarobot/classes-and-inheritance)    |
-| **[Methods](https://github.com/Jekarobot/Methods)**                                 | Методы объектов                             | [Перейти](https://github.com/Jekarobot/Methods)                    |
-| **[forIn](https://github.com/Jekarobot/forIn)**                                     | Цикл for...in                               | [Перейти](https://github.com/Jekarobot/forIn)                      |
-| **[nicknames](https://github.com/Jekarobot/nicknames)**                             | Генератор никнеймов                         | [Перейти](https://github.com/Jekarobot/nicknames)                  |
-
----
-
-## 🎮 Игры и развлечения
-
-| Проект                                            | Описание        | Ссылка                                                        |
-| ------------------------------------------------- | --------------- | ------------------------------------------------------------- |
-| **[npm-hw](https://github.com/Jekarobot/npm-hw)** | Браузерная игра | [Перейти](https://github.com/Jekarobot/npm-hw)                |
-| **[dom](https://github.com/Jekarobot/dom)**       | Работа с DOM    | [Перейти](https://github.com/Jekarobot/dom)                   |
-
----
-
-## 🧪 Экспериментальные и учебные проекты
-
-| Проект                                                              | Описание                  | Ссылка                                                     |
-| ------------------------------------------------------------------- | ------------------------- | ---------------------------------------------------------- |
-| **[testAjs](https://github.com/Jekarobot/testAjs)**                 | Тестовый проект AJS       | [Перейти](https://github.com/Jekarobot/testAjs)            |
-| **[MyTemplate](https://github.com/Jekarobot/MyTemplate)**           | Мой шаблон                | [Перейти](https://github.com/Jekarobot/MyTemplate)         |
-| **[ajs](https://github.com/Jekarobot/ajs)**                         | Основы AJS                | [Перейти](https://github.com/Jekarobot/ajs)                |
-| **[Portfolio](https://github.com/Jekarobot/Portfolio)**             | Портфолио                 | [Перейти](https://github.com/Jekarobot/Portfolio)          |
-| **[HW_REVERT](https://github.com/Jekarobot/HW_REVERT)**             | Домашнее задание (revert) | [Перейти](https://github.com/Jekarobot/HW_REVERT)          |
-| **[Site_For_Import](https://github.com/Jekarobot/Site_For_Import)** | Сайт для импорта          | [Перейти](https://github.com/Jekarobot/Site_For_Import)    |
-
----
-
-## 🐙 Git & GitHub
-
-| Проект                                                                          | Описание                 | Ссылка                                                           |
-| ------------------------------------------------------------------------------- | ------------------------ | ---------------------------------------------------------------- |
-| **[git-2-homeworks-merge](https://github.com/Jekarobot/git-2-homeworks-merge)** | Работа с merge в Git     | [Перейти](https://github.com/Jekarobot/git-2-homeworks-merge)    |
-| **[NeuroStartUp](https://github.com/Jekarobot/NeuroStartUp)**                   | Демо-проект NeuroStartUp | [Перейти](https://github.com/Jekarobot/NeuroStartUp)             |
-
----
-
-## 📱 Адаптивная верстка
-
-| Проект                                                    | Описание                               | Ссылка                                                |
-| --------------------------------------------------------- | -------------------------------------- | ----------------------------------------------------- |
-| **[mq-diploma](https://github.com/Jekarobot/mq-diploma)** | Дипломный проект по адаптивной верстке | [Перейти](https://github.com/Jekarobot/mq-diploma)    |
-
----
-
-_Создано с ❤️ для демонстрации моих навыков и проектов._
+## ⚛️ React Hooks
+| Проект | Описание | Ссылка |
+|--------|----------|--------|
+| useJsonFetch | Проект "useJsonFetch" предназначен для демонстрации пользовательского React-хука | [Перейти](https://github.com/Jekarobot/useJsonFetch) |
+| useEffectHook | Проект "useEffectHook" демонстрирует использование хука useEffect в React для вы | [Перейти](https://github.com/Jekarobot/useEffectHook) |
