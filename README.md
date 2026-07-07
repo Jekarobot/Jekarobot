@@ -208,12 +208,6 @@ Railway Booking — это клиентское веб-приложение дл
 
 🔗 [Перейти к проекту](https://github.com/Jekarobot/railway-booking)
 
-## 📁 Прочие проекты
-| Проект | Описание | Ссылка |
-|--------|----------|--------|
-| Jekarobot | Автоматизация задач через Telegram | [Перейти](https://github.com/Jekarobot/Jekarobot) |
-| Portfolio | Демонстрация достижений и сертификатов | [Перейти](https://github.com/Jekarobot/Portfolio) |
-
 ## 🧪 Тестирование
 | Проект | Описание | Ссылка |
 |--------|----------|--------|
