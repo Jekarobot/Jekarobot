@@ -130,12 +130,12 @@
 
 🔗 [Перейти к проекту](https://github.com/Jekarobot/railway-booking)
 
+![github-snake]([https://raw.githubusercontent.com/Platane/snk/output/github-snake.gif](https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg))
+
 ## 📁 Прочие проекты
 | Проект | Описание | Ссылка |
 |--------|----------|--------|
-| Jekarobot | Telegram-бот для автоматизации ответов | [Перейти](https://github.com/Jekarobot/Jekarobot) |
 | trello-clone | Клон Trello с drag-and-drop | [Перейти](https://github.com/Jekarobot/trello-clone) |
-| Portfolio | Демонстрация достижений и сертификатов | [Перейти](https://github.com/Jekarobot/Portfolio) |
 
 ## 📊 Дипломные проекты
 | Проект | Описание | Ссылка |
