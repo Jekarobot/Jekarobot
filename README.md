@@ -130,7 +130,7 @@
 
 🔗 [Перейти к проекту](https://github.com/Jekarobot/railway-booking)
 
-![github-snake]([https://raw.githubusercontent.com/Platane/snk/output/github-snake.gif](https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg))
+![github-snake]((https://raw.githubusercontent.com/platane/snk/output/github-contribution-grid-snake-dark.svg))
 
 ## 📁 Прочие проекты
 | Проект | Описание | Ссылка |
